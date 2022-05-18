@@ -7,6 +7,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* One linear for smooth scroll effect in the html document */
+html {
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 90px; */
+}
+
 body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
