@@ -1,12 +1,11 @@
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
   font-family: "Open Sans", sans-serif;
 }
 
@@ -543,7 +542,3 @@ section .container {
   }
 }
 /* Contacts Section design ends here */
-=======
-  font-family: 'Open Sans', sans-serif;
-}
->>>>>>> parent of 9b81554 (intial commit)
