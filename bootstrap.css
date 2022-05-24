@@ -86,33 +86,32 @@ html {
   height: 8%;
 }
 
-.scrolling-active nav{
+.scrolling-active nav {
   padding: 0;
   transition: all 0.1s ease;
-
 }
-.bars{
+.bars {
   display: none;
+  font-size: 1.5em;
   cursor: pointer;
 }
 
-.overlay{
-  display: none;
+.overlay {
+  visibility: hidden;
   position: fixed;
   z-index: 2000;
   top: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   width: 100vw;
-  transform: translate(-50%);
+  transition: 0.5s;
 }
 
-.overlay.active{
-  display: block;
-  transform: translateX(0%);
+.overlay.active {
+  visibility: visible;
 }
 
-.overlay-nav{
+.overlay-nav {
   background-color: white;
   width: 50%;
   height: 100%;
@@ -123,52 +122,55 @@ html {
   transition: all 0.35s ease;
 }
 
-.active .overlay-nav{
+.active .overlay-nav {
   transform: translateX(0%);
 }
 
-.overlay-nav-list{
+.overlay-nav-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
 }
 
-.overlay-nav-list li{
+.overlay-nav-list li {
   list-style-type: none;
   font-size: 2.5em;
 }
 
-.overlay-nav-list li a{
+.overlay-nav-list li a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 850px){
-  .navigation-bar-list{
+@media screen and (max-width: 850px) {
+  .navigation-bar-list {
     display: none;
   }
-  .navigation-bar-contacts{
+  .navigation-bar-contacts {
     display: none;
   }
 
-  .bars{
+  .bars {
     display: block;
+    cursor: pointer;
   }
 }
 
 /* Navigation bar design ends here*/
 
 section {
-  height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
-section .container {
+/* section .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 4%;
   padding-bottom: 2%;
-}
+} */
 /* Home Section Design starts here */
 
 #home {
@@ -182,9 +184,16 @@ section .container {
   );
 }
 
+#home .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5%;
+}
+
 .home-img {
-  width: 900px;
-  height: 700px;
+  width: 56.25em;
+  height: 43.75em;
   object-fit: cover;
 }
 
@@ -195,6 +204,31 @@ section .container {
 .home-description h1 {
   font-size: 4em;
   font-weight: 700;
+}
+
+@media (max-width: 1210px) {
+  .home-img{
+    width: 46.25em;
+    height: 33.75em;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1010px){
+ .home-img{
+   display: none;
+ }
+ #home .container{
+   justify-content: center;
+   padding: 5% 0;
+   height: 100vh;
+ }
+ .home-description{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+ }
 }
 /* Home Section ends here */
 
